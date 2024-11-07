@@ -212,7 +212,8 @@ if __name__ == "__main__":
             superpixel_large = os.path.join(inputs, f"superpix-XLARGE_{num}.nii.gz")
             superpixel_middle = os.path.join(inputs, f"superpix-MIDDLE_{num}.nii.gz")
             superpixel_small = os.path.join(inputs, f"superpix-SMALL_{num}.nii.gz")
-            superpixel_volumes = [superpixel_large, superpixel_middle, superpixel_small]
+            # superpixel_volumes = [superpixel_large, superpixel_middle, superpixel_small]
+            superpixel_volumes = [superpixel_middle]
             foreground_volume = os.path.join(inputs, f"fgmask_{num}.nii.gz")
             output_volume_path = os.path.join(inputs, f"segmented_{num}.nii.gz")
             process_volume(input_volume_path, output_volume_path, superpixel_volumes, foreground_volume)
